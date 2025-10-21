@@ -9,17 +9,15 @@ tempo_quad = t.^2
 N = length(t)
 
 soma_tempo = sum(t)
-soma_tempo_quad = sum(tempo_quad) #Para calculo dos coeficientes
+soma_tempo_quad = sum(tempo_quad) 
 
 ln_celulas = log(NC)
 
-soma_ln_celulas = sum(ln_celulas) #Para calculo dos coeficientes
+soma_ln_celulas = sum(ln_celulas) 
 
 tempo_X_ln_celulas = t.*ln_celulas
 
-soma_do_produto = sum(tempo_X_ln_celulas) #Para calculo dos coeficientes
-
-## CALCULANDO OS COEFICIENTES
+soma_do_produto = sum(tempo_X_ln_celulas)
 
 a1 = (N*soma_do_produto - soma_tempo*soma_ln_celulas)/(N*soma_tempo_quad - soma_tempo^2)
 
